@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Disaster Report</title>
+    <style>
+        /* General reset for margin, padding, and box-sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            background: url('./disaster1.jpeg');
+        }
+
+        /* Header styling */
+        header {
+            background-color: #00457C;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Main content area styling */
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Section styling */
+        section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            color: #00457C;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input[type="text"], select, textarea {
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            width: 100%;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus, select:focus, textarea:focus {
+            border-color: #00457C;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: #00457C;
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        button:hover {
+            background-color: #00325a;
+            transform: translateY(-2px);
+        }
+
+        
+        /* Add responsive design */
+        @media (max-width: 600px) {
+            section {
+                padding: 20px;
+            }
+
+            button {
+                font-size: 16px;
+                padding: 12px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Submit a Disaster Report</h1>
+    </header>
+
+    <main>
+        <section id="submit-report">
+            <h2>Fill in the form below</h2>
+            <form action="#" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" placeholder="Enter the affected area" required>
+
+                <label for="disaster-type">Disaster Type:</label>
+                <select id="disaster-type" name="disaster-type" required>
+                    <option value="" disabled selected>Select a disaster type</option>
+                    <option value="flood">Flood</option>
+                    <option value="earthquake">Earthquake</option>
+                    <option value="storm">Storm</option>
+                    <option value="fire">Fire</option>
+                    <option value="landslide">Landslide</option>
+                    <option value="road closure">Road Closure</option>
+                    <option value="heavy rainfall">Heavy Rainfall</option>
+                    <option value="heavy traffic">Traffic</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <label for="situation type">Situation Type:</label>
+                <label>
+                    <input type="radio" name="situation type" value="critical">
+                    Critical
+                    <input type="radio" name="situation type" value="moderate" checked>
+                    Moderate
+                </label>
+
+
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="5" placeholder="Describe the situation in detail" required></textarea>
+
+                <button type="submit">Submit Report</button>
+            </form>
+        </section>
+    </main>
+
+  
+</body>
+</html>

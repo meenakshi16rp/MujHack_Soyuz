@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select City - Disaster Reports</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background: url('./hello.jpeg');
+        }
+        
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        h2 {
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        label, input, button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+        }
+        
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        input {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+        
+        button {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #004494;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Select Your City</h1>
+    </header>
+
+    <main>
+        <section id="city-selection">
+            <h2>Enter a City to View Reports</h2>
+            <form action="city-reports.html" method="get">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" placeholder="Enter city name" required>
+                <button type="submit">View Reports</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
